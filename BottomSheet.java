@@ -56,5 +56,15 @@
 }
 
 -----------------------------------------------------------------------------------------------------------------------------
+3rd Kotlin/Java
 
+        val bottomSheetBehavior = BottomSheetBehavior.from(bottomsheet_average_filter)
 
+        fab_all_ManagerFeedbacks.setOnClickListener {
+            if (bottomSheetBehavior.state != BottomSheetBehavior.STATE_EXPANDED) {
+                bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+                // btnBottomSheet.setText("Close sheet");
+            } else {
+                bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+            }
+        }
