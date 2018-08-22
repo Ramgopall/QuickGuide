@@ -1,0 +1,74 @@
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
+        getSupportActionBar().show();
+        getSupportActionBar().setTitle("My Android App");
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.mipmap.ic_launcher);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add("Hello");
+        menu.add("Java");
+        menu.add("Android");
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId()==android.R.id.home)
+        {
+            Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+        }
+
+        if(item.getTitle()=="Hello")
+        {
+            Toast.makeText(this, "hello selected", Toast.LENGTH_SHORT).show();
+        }
+
+        else if(item.getTitle()=="Android")
+        {
+            Toast.makeText(this, "Android selected", Toast.LENGTH_SHORT).show();
+        }
+        else
+            Toast.makeText(this, "Java selected", Toast.LENGTH_SHORT).show();
+
+        return super.onOptionsItemSelected(item);
+    }
+	
+	---------------------------------------------------------------------------------------------------------------
+	if having menu.xml file use this:-
+	
+	
+	@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater mi = new MenuInflater(MainActivity.this);
+        mi.inflate(R.menu.mymenu,menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId()==R.id.m1)
+        {
+            Toast.makeText(this, "M1 Selected", Toast.LENGTH_SHORT).show();
+        }
+
+        else if(item.getItemId()==R.id.m2)
+        {
+            Toast.makeText(this, "M2 Selected", Toast.LENGTH_SHORT).show();
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }

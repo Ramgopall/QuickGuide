@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/m1"
+        android:title="m1"
+        android:showAsAction="always"
+        android:icon="@mipmap/ic_launcher"
+
+        ></item>
+
+
+    <item
+        android:id="@+id/m2"
+        android:title="more"
+
+        >
+    <menu>
+        <item
+            android:id="@+id/m5"
+            android:title="m5"
+
+            >
+
+        </item>
+        <item
+            android:id="@+id/m6"
+            android:title="m6"
+
+            >
+
+        </item>
+        <item
+            android:id="@+id/m7"
+            android:title="m7"
+
+            >
+
+        </item>
+
+    </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/m3"
+        android:title="m3"
+
+        ></item>
+
+
+
+    <item
+        android:id="@+id/m4"
+        android:title="m4"
+
+        ></item>
+
+
+</menu>
