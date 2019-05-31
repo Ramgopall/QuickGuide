@@ -12,7 +12,7 @@ GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DE
 			.addApi(Auth.GOOGLE_SIGN_IN_API, gso)
 			.build();
 
-	googleSignIn.setOnClickListener(new View.OnClickListener() {
+	linearLayout_google_signIn.setOnClickListener(new View.OnClickListener() {
 		@Override
 		public void onClick(View v) {
 			Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
@@ -56,3 +56,31 @@ GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DE
 
                                     }
                                 });
+								
+////////////////////////////////////////////////////////////////////////////////
+XML:-
+
+
+ <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/frameLayout_google">
+
+                        <com.google.android.gms.common.SignInButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/google_signIn"
+                            android:visibility="gone"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_google_signIn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/google_icon"
+                            android:orientation="horizontal"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            />
+                    </FrameLayout>
