@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModelImages"
+            type="Integer" />
+
+        <variable
+            name="viewModel"
+            type="com.triviallanguages.ui.question.QuestionViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1f1f1"
+        android:orientation="vertical"
+        android:weightSum="20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="7.5">
+
+            <LinearLayout
+                android:layout_width="@dimen/_68sdp"
+                android:layout_height="@dimen/_68sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/question_round"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="-4dp"
+                    android:fontFamily="@font/berlin_sans_fb_demi_bold"
+                    android:text="Round"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/tvQuestionRound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/berlin_sans_fb_demi_bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/flag" />
+
+            <TextView
+                android:id="@+id/tvQuestionLevel"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_19sdp"
+                android:background="@drawable/level_star"
+                android:fontFamily="@font/berlin_sans_fb_demi_bold"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_3sdp"
+                android:textColor="#D80027"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvQuestionLevel"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_23sdp"
+                android:fontFamily="@font/futura_medium_bt"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Level"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llQuestionCategory"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivQuestionCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_56sdp"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    app:image="@{viewModelImages}" />
+
+                <ImageView
+                    android:id="@+id/ivQuestionSuffel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivQuestionCircle"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_above="@+id/llQuestionCategory"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/question_frame"
+                android:padding="@dimen/_13sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10.5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="10.5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llQuestionQst"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_weight="5.5"
+                        android:background="@drawable/question_block"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvQustionNumber1"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardUseCompatPadding="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvQustionNumber2"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardUseCompatPadding="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvQustionNumber3"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardUseCompatPadding="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvQustionNumber4"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardUseCompatPadding="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvQustionNumber5"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardUseCompatPadding="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvQustionNumber6"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardUseCompatPadding="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvQustionNumber7"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardUseCompatPadding="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvQustionNumber8"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardUseCompatPadding="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvQustionNumber9"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardUseCompatPadding="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvQustionNumber10"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/_2sdp"
+                                app:cardUseCompatPadding="true" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvQuestionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_16sdp"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_16sdp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/rlQuestionSpeak"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:onClick="@{viewModel::onSpickerClick}"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="@dimen/_42sdp"
+                                android:layout_height="@dimen/_42sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/question_speaker" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:fontFamily="@font/futura_medium_bt"
+                                android:gravity="center"
+                                android:text="Tap to Listen"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_16sdp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlQuestionOptions"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:visibility="invisible">
+
+                        <LinearLayout
+                            android:id="@+id/llQuestionOptions"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/llQuestionOption1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/red_button"
+                                    android:onClick="@{viewModel::onOption1Click}">
+
+                                    <TextView
+                                        android:id="@+id/tvQuestionOption1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/futura_medium_bt"
+                                        android:gravity="center"
+                                        android:paddingStart="@dimen/_8sdp"
+                                        android:paddingEnd="@dimen/_8sdp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold"
+                                        android:visibility="invisible"
+                                        tools:ignore="NestedWeights" />
+
+                                    <ImageView
+                                        android:id="@+id/ivQuestionOption1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:id="@+id/llQuestionOption2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/blue_button"
+                                    android:onClick="@{viewModel::onOption2Click}">
+
+                                    <TextView
+                                        android:id="@+id/tvQuestionOption2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/futura_medium_bt"
+                                        android:gravity="center"
+                                        android:paddingStart="@dimen/_8sdp"
+                                        android:paddingEnd="@dimen/_8sdp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold"
+                                        android:visibility="invisible" />
+
+                                    <ImageView
+                                        android:id="@+id/ivQuestionOption2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/llQuestionOption3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/green_button"
+                                    android:onClick="@{viewModel::onOption3Click}">
+
+                                    <TextView
+                                        android:id="@+id/tvQuestionOption3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/futura_medium_bt"
+                                        android:gravity="center"
+                                        android:paddingStart="@dimen/_8sdp"
+                                        android:paddingEnd="@dimen/_8sdp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold"
+                                        android:visibility="invisible"
+                                        tools:ignore="NestedWeights" />
+
+                                    <ImageView
+                                        android:id="@+id/ivQuestionOption3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/llQuestionOption4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/yellow_button"
+                                    android:onClick="@{viewModel::onOption4Click}">
+
+                                    <TextView
+                                        android:id="@+id/tvQuestionOption4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/futura_medium_bt"
+                                        android:gravity="center"
+                                        android:paddingStart="@dimen/_8sdp"
+                                        android:paddingEnd="@dimen/_8sdp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold"
+                                        android:visibility="invisible" />
+
+                                    <ImageView
+                                        android:id="@+id/ivQuestionOption4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llQuestionClock"
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_54sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/question_watch"
+                            android:visibility="invisible">
+
+                            <TextView
+                                android:id="@+id/tvQuestionTimer"
+                                android:layout_width="@dimen/_48sdp"
+                                android:layout_height="@dimen/_54sdp"
+                                android:fontFamily="@font/berlin_sans_fb_demi_bold"
+                                android:gravity="center"
+                                android:onClick="@{viewModel::onClockClick}"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_18sdp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/ivQuestionLargeAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivQuestionReadyFlag"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ready_flag"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivQuestionCorrectAns"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/correct_and_girl"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivQuestionWrongAns"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wrong_ans_girl"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:padding="@dimen/_2sdp">
+
+            <RelativeLayout
+                android:id="@+id/rlQuestionJoker"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:onClick="@{viewModel::onHelpClick}">
+
+                <ImageView
+                    android:id="@+id/ivQuestionJoker"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/joker_bg"
+                    android:padding="@dimen/_9sdp"
+                    android:src="@drawable/clown_22_00000" />
+
+                <TextView
+                    android:id="@+id/tvQuestionHelp"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:background="@drawable/ic_red_spear"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlQuestionWrongAttemps"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/question_bulb" />
+
+                <TextView
+                    android:id="@+id/tvQuestionWrongAttemps"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:background="@drawable/ic_red_spear"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_9sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivQuestionSmallAd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_toStartOf="@+id/rlQuestionWrongAttemps"
+                android:layout_toEndOf="@+id/rlQuestionJoker" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

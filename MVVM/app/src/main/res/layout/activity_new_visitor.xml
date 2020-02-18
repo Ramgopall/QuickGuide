@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.duke.visitormanagement.ui.newVisitor.NewVisitorViewModel" />
+
+        <variable
+            name="spinAdapter1"
+            type="android.widget.ArrayAdapter" />
+
+        <variable
+            name="spinAdapter2"
+            type="android.widget.ArrayAdapter" />
+
+        <variable
+            name="spinAdapter3"
+            type="android.widget.ArrayAdapter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/bg_home_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:onClick="@{viewmodel::onBackClick}"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                app:cardCornerRadius="@dimen/_21sdp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_13sdp"
+                    android:src="@drawable/ic_back_arrow" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:layout_gravity="center_horizontal"
+                            tools:ignore="ContentDescription"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:onClick="@{viewmodel::onImageClick}"
+                            app:placeholder="@{@drawable/ic_account_circle_black}"
+                            app:roundImage="@{viewmodel.imageUrl}" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAdminHomeName"
+                            style="@style/ClassifiedTextInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etAdminHomeName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/opensans_regular"
+                                android:hint="@string/name"
+                                android:inputType="text"
+                                android:text="@={viewmodel.visitorName}"
+                                android:textSize="@dimen/_10sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAdminHomeNumber"
+                            style="@style/ClassifiedTextInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etAdminHomeNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/opensans_regular"
+                                android:hint="@string/number"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:text="@={viewmodel.contactNumber}"
+                                android:textSize="@dimen/_10sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAdminHomeVehicle"
+                            style="@style/ClassifiedTextInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etAdminHomeVehicle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/opensans_regular"
+                                android:hint="@string/vehicle_number_optional"
+                                android:inputType="text"
+                                android:text="@={viewmodel.vehicleNumber}"
+                                android:textSize="@dimen/_10sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAdminHomePurpose"
+                            style="@style/ClassifiedTextInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etAdminHomePurpose"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/opensans_regular"
+                                android:gravity="start|top"
+                                android:hint="@string/purpose"
+                                android:inputType="textMultiLine"
+                                android:text="@={viewmodel.purpose}"
+                                android:textSize="@dimen/_10sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="@{viewmodel.firstSpinnerTitle}"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_16sdp"
+                            android:onItemSelected="@{viewmodel::onFirstSpinnerItemSelect}"
+                            android:selectedItemPosition="@={viewmodel.firstSelectedItemPosition}"
+                            app:adapter="@{spinAdapter1}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="@{viewmodel.secondSpinnerTitle}"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_16sdp"
+                            android:onItemSelected="@{viewmodel::onSecondSpinnerItemSelect}"
+                            android:selectedItemPosition="@={viewmodel.secondSelectedItemPosition}"
+                            app:adapter="@{spinAdapter2}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="@{viewmodel.thirdSpinnerTitle}"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_16sdp"
+                            android:onItemSelected="@{viewmodel::onThirdSpinnerItemSelect}"
+                            android:selectedItemPosition="@={viewmodel.thirdSelectedItemPosition}"
+                            app:adapter="@{spinAdapter3}" />
+
+                        <Button
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/opensans_regular"
+                            android:onClick="@{viewmodel::onSubmitClick}"
+                            android:text="@string/submit"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </LinearLayout>
+                </ScrollView>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

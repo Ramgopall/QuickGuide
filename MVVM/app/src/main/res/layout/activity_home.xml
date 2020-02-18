@@ -1,0 +1,94 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.triviallanguages.ui.home.HomeViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg"
+        android:orientation="vertical"
+        android:weightSum="20">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="3.1"
+            android:src="@drawable/flag"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".9" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2.3"
+            android:src="@drawable/choose_your_level"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".9" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="11.9">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vpHome"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_246sdp"
+                android:layout_centerHorizontal="true"
+                android:overScrollMode="never" />
+
+            <ImageView
+                android:id="@+id/ivHomePrevious"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_53sdp"
+                android:onClick="@{viewModel::onPreviousButtonClick}"
+                android:src="@drawable/choose_level_left_arrow" />
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_53sdp"
+                android:id="@+id/ivHomeNext"
+                android:onClick="@{viewModel::onNextButtonClick}"
+                android:src="@drawable/choose_level_right_arrow" />
+
+            <ImageView
+                android:id="@+id/ivHomePlay"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_below="@+id/vpHome"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:onClick="@{viewModel::onPlayButtonClick}"
+                android:scaleType="fitXY"
+                android:src="@drawable/choose_level_play_button" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

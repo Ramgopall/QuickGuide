@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_370sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:background="@drawable/popup_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@drawable/answer_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/berlin_sans_fb_demi_bold"
+                android:gravity="center"
+                android:lineSpacingExtra="0dp"
+                android:text="The correct answer is-"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_14sdp" />
+
+            <TextView
+                android:id="@+id/tvPopUpAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@drawable/curve_textview"
+                android:fontFamily="@font/futura_medium_bt"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:text="Millón"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@drawable/message_background">
+
+            <ImageView
+                android:id="@+id/ivPopUpExpression"
+                android:layout_width="@dimen/_94sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="-1dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/expression1" />
+
+            <TextView
+                android:id="@+id/tvPopUpExpressionWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_toStartOf="@+id/ivPopUpExpression"
+                android:background="@drawable/call_out_bubble"
+                android:fontFamily="@font/berlin_sans_fb_demi_bold"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_16sdp"
+                android:text="My dear friend, this is the first time you have done mistake in the same question.\nKEEP ATTENTION!"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivPopUpGotIt"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_56sdp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/gotit_button" />
+
+</LinearLayout>
