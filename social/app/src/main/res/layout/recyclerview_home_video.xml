@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_16sdp"
+    android:layout_marginBottom="@dimen/_16sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlRvHomeProfile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/ivRvHomeProfile"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp" />
+
+        <TextView
+            android:id="@+id/tvRvHomeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_toEndOf="@+id/ivRvHomeProfile"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:id="@+id/tvRvHomeDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRvHomeName"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_toEndOf="@+id/ivRvHomeProfile"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_9sdp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvRvHomeDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_10sdp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp">
+        <FrameLayout
+            android:id="@+id/mediaContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:scaleType="center"
+            >
+
+            <ImageView
+                android:id="@+id/ivMediaCoverImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                />
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyle"
+                />
+        </FrameLayout>
+        <ImageView
+            android:id="@+id/ivVolumeControl"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="15dp"
+            android:animateLayoutChanges="true"
+            android:src="@drawable/ic_unmute"
+            android:padding="@dimen/_6sdp"
+            android:background="@drawable/black_circlee"
+            />
+        <ImageView
+            android:id="@+id/ivPlayVideo"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play_button"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlRvHomeLike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_4sdp">
+
+        <CheckBox
+            android:id="@+id/cbRvHomeLike"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:button="@drawable/checkbox_like" />
+
+        <ImageView
+            android:id="@+id/ivRvHomeComment"
+            android:src="@drawable/ic_comment"
+            android:layout_toEndOf="@+id/cbRvHomeLike"
+            android:padding="@dimen/_9sdp"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp" />
+
+        <TextView
+            android:layout_marginTop="@dimen/_4sdp"
+            android:id="@+id/tvRvHomeLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbRvHomeLike"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:layout_marginTop="@dimen/_4sdp"
+            android:id="@+id/tvRvHomeComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRvHomeLikes"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_11sdp" />
+
+        <ImageView
+            android:id="@+id/ivRvHomeShare"
+            android:src="@drawable/ic_share"
+            android:padding="@dimen/_8sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Share"
+            android:layout_toStartOf="@+id/ivRvHomeShare"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_11sdp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

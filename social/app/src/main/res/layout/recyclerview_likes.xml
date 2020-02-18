@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:id="@+id/llRvLikesMain"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp">
+        <ImageView
+                android:id="@+id/ivRvLikesProfile"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"/>
+        <TextView
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_toEndOf="@+id/ivRvLikesProfile"
+                android:id="@+id/tvRvLikesName"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_toEndOf="@+id/ivRvLikesProfile"
+                android:layout_below="@+id/tvRvLikesName"
+                android:id="@+id/tvRvLikesDate"
+                android:textSize="@dimen/_9sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/signup_background"
+    android:weightSum="10">
+
+    <View android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.6"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="8.4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRegisterPhoto"
+            android:src="@drawable/ic_person"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"/>
+
+        <!--Name-->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_marginTop="@dimen/_12sdp"
+            android:id="@+id/etRegisterName"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:hint="@string/name"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:padding="@dimen/_12sdp"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableStart="@drawable/ic_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--Email-->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etRegisterEmail"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:hint="@string/enter_e_mail"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:padding="@dimen/_12sdp"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableStart="@drawable/ic_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--Number-->
+        <LinearLayout
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spnRegisterCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:background="@drawable/spn_bg"
+                android:padding="0dp"
+                android:spinnerMode="dropdown" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etRegisterNumber"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:hint="@string/phone_no"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:padding="@dimen/_12sdp"
+                android:drawablePadding="@dimen/_12sdp"
+                android:drawableStart="@drawable/ic_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+        <!--Password-->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etRegisterPassword"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:padding="@dimen/_12sdp"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableStart="@drawable/ic_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--ReferralCode-->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etRegisterReferralCode"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:hint="@string/referral_code"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:padding="@dimen/_12sdp"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableStart="@drawable/ic_referral_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Gender"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp" />
+
+        <RadioGroup
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbRegisterMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Male"
+                android:textSize="@dimen/_11sdp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbRegisterFeMale"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Female"
+                android:textSize="@dimen/_11sdp" />
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:gravity="center">
+
+            <!--Submit-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegisterSubmit"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/login_button"
+                android:text="@string/register"
+                android:textAllCaps="false"
+                android:textColor="@color/colorRed"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_14sdp"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_34sdp"/>
+
+            <!--login-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginStart="@dimen/_16sdp"
+                android:id="@+id/btnRegisterLogin"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/login_button"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/colorRed"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_14sdp"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_34sdp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

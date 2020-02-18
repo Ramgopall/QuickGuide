@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llCommentsActionBar"
+        android:orientation="horizontal"
+        android:background="@color/colorRed"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+        <ImageView
+            android:id="@+id/ivCommentsBack"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_back_white"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"/>
+        <TextView
+            android:text="Comments"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/llComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.duke.diskoverusosyal.MyEditText
+            android:id="@+id/etCommentsMsg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="@string/your_message"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_11sdp"
+            android:background="@drawable/choose_image_background"
+            android:inputType="textEmailAddress"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCommentsSend"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/_10sdp"
+            android:text="@string/send" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pbComments"
+        android:layout_above="@+id/llComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_above="@+id/pbComments"
+        android:layout_below="@+id/llCommentsActionBar"
+        android:id="@+id/rvComments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"/>
+</RelativeLayout>

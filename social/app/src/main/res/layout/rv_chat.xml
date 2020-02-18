@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/messagee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_80sdp"
+        android:background="@drawable/chat_user_message_background"
+        android:fontFamily="@font/montserrat_regular"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:text="message"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/messagee_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="@dimen/_6sdp"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/my_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="@dimen/_80sdp"
+        android:background="@drawable/chat_my_message_background"
+        android:fontFamily="@font/montserrat_regular"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:text="message"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/my_message_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="@dimen/_6sdp"
+        android:visibility="gone" />
+</LinearLayout>

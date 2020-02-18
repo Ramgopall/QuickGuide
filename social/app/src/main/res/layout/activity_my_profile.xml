@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rvMyProfileDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/profile_background">
+
+        <ImageView
+            android:id="@+id/ivMyProfileBack"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_back_white" />
+
+        <LinearLayout
+            android:id="@+id/llMyProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivMyProfilePhoto"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp" />
+
+            <TextView
+                android:id="@+id/tvMyProfileName"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMyProfilePosts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Posts"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tvMyProfilePostCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_18sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMyProfileWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_36sdp"
+            android:layout_toStartOf="@+id/llMyProfilePosts"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Sosyal Cash"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tvMyProfileWallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_18sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMyProfileEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llMyProfilePosts"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnMyProfileEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24sp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="@drawable/login_button"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_6sdp"
+                    android:text="Edit Profile"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_8sdp" />
+
+                <Button
+                    android:id="@+id/btnMyProfileInvite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24sp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/login_button"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_6sdp"
+                    android:text="Chat Invitation"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnMyProfileBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="24sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@drawable/login_button"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:text="Block"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_8sdp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMyProfileDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llMyProfileEdit"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/tvMyProfileDetails"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_11sdp" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/llMyProfileSkill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Skills :"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:id="@+id/tvMyProfileSkill"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMyProfileExp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Experience :"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:id="@+id/tvMyProfileExp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rvMyProfileDetails"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMyProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/pbMyProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMyProfileAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:backgroundTint="@color/colorRed"
+        android:src="@drawable/ic_add_white_24dp" />
+
+</RelativeLayout>

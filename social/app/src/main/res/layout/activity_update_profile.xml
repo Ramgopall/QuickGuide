@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llUpdateProfile"
+    android:visibility="visible"
+    android:background="@drawable/products_background">
+
+    <ImageView
+        android:id="@+id/ivUpdateProfileBack"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:padding="@dimen/_12sdp"
+        android:src="@drawable/ic_back" />
+
+    <ImageView
+        android:id="@+id/ivUpdateProfileSubmit"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/_11sdp"
+        android:src="@drawable/ic_check_mark" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivUpdateProfileBack">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true">
+
+            <ScrollView
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvUpdateProfileName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Name"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <EditText
+                        android:id="@+id/etUpdateProfileName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Detail"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/etUpdateProfileDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Gender"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <RadioGroup
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/rbUpdateProfileMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Male"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/rbUpdateProfileFeMale"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Female"
+                            android:textSize="@dimen/_11sdp" />
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Skills"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <EditText
+                        android:id="@+id/etUpdateProfileSkill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Experience"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <EditText
+                        android:id="@+id/etUpdateProfileExperience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp" />
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="About Your Self"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <EditText
+                        android:id="@+id/etUpdateProfilePdetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:inputType="textMultiLine"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Private Information"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/referral_code"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <EditText
+                        android:id="@+id/etUpdateProfileRef"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorGrayDark"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="E-mail Address"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <EditText
+                        android:id="@+id/etUpdateProfileEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorGrayDark"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/tvUpdateProfilePhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Phone Number"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlUpdateProfilePhone"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:maxLength="10"
+                            android:inputType="number"
+                            android:id="@+id/etUpdateProfilePhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/colorGrayDark"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/ivUpdateProfilePhone"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_edit_black"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/tvUpdateProfilePhoneUpdate"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_margin="@dimen/_16sdp"
+                        android:layout_gravity="end"
+                        android:text="Apply"
+                        android:textSize="@dimen/_14sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ivUpdateProfilePhoto"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_person" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnUpdateProfileDeactive"
+            android:text="Deactive Account"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorRed"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnUpdateProfileDelete"
+            android:text="Delete Account"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorRed"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>

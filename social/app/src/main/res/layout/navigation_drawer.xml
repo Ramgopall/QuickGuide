@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/_190sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:background="@color/colorGrayLight"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp">
+
+        <ImageView
+            android:id="@+id/llNdPhoto"
+            android:layout_width="@dimen/_46sdp"
+            android:layout_height="@dimen/_46sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_11sdp"
+            android:id="@+id/llNdName"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--Profile-->
+    <LinearLayout
+        android:id="@+id/llNdProfile"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingStart="@dimen/_24sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_person"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:text="Profile"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--Messages-->
+    <LinearLayout
+        android:id="@+id/llNdMessages"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingStart="@dimen/_24sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_chat"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:text="Messages"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--Wallet-->
+    <LinearLayout
+        android:id="@+id/llNdWallet"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingStart="@dimen/_24sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_color_wallet"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:text="Sosyal Cash"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--Search-->
+    <LinearLayout
+        android:id="@+id/llNdSearch"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingStart="@dimen/_24sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_color_search"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:text="Search"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--Notification-->
+    <LinearLayout
+        android:id="@+id/llNdNotification"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingStart="@dimen/_24sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_notification_color"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:text="Notification"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--Prices-->
+    <LinearLayout
+        android:id="@+id/llNdPrices"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingStart="@dimen/_24sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_dollar_color"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:text="Subscribe &amp; Earn"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--ReferAndEarn-->
+    <LinearLayout
+        android:id="@+id/llNdRefer"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingStart="@dimen/_24sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_refer"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:text="Connect &amp; Earn"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--Help-->
+    <LinearLayout
+        android:id="@+id/llNdHelp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingStart="@dimen/_24sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_info"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:text="Help &amp; Support"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--Logout-->
+    <LinearLayout
+        android:id="@+id/llNdLogout"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingStart="@dimen/_24sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_logout_color"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:text="Logout"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvUploadTitle"
+        android:layout_margin="@dimen/_8sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        style="@android:style/Widget.Material.ProgressBar.Horizontal"
+        android:id="@+id/pbUpload"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvUpload"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textSize="@dimen/_11sdp"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRvCommentsMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/ivRvCommentsProfile"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:src="@drawable/ic_person" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivRvCommentsDelete"
+            android:padding="@dimen/_3sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_delete_black" />
+        <TextView
+            android:id="@+id/tvRvCommentsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_toEndOf="@+id/ivRvCommentsProfile"
+            android:layout_toStartOf="@+id/ivRvCommentsDelete"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Ram Gopal"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:id="@+id/tvRvCommentsDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRvCommentsName"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_toEndOf="@+id/ivRvCommentsProfile"
+            android:layout_toStartOf="@+id/ivRvCommentsDelete"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="19 Jan,2019"
+            android:textSize="@dimen/_9sdp" />
+
+        <TextView
+            android:id="@+id/tvRvCommentsMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRvCommentsDate"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingStart="0dp"
+            android:layout_toEndOf="@+id/ivRvCommentsProfile"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/colorBlack"
+            android:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+            android:textSize="@dimen/_9sdp" />
+    </RelativeLayout>
+
+</LinearLayout>

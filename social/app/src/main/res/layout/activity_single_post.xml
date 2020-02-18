@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorRed">
+
+        <ImageView
+            android:id="@+id/ivSinglePostBack"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_back_white" />
+
+        <ImageView
+            android:id="@+id/ivSinglePostDelete"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"
+            android:src="@drawable/ic_delete_white" />
+
+        <TextView
+            android:layout_toEndOf="@+id/ivSinglePostBack"
+            android:layout_toStartOf="@+id/ivSinglePostDelete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:text="Post"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_16sdp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llSinglePost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_8sdp">
+
+            <ImageView
+                android:id="@+id/ivSinglePostProfile"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp" />
+
+
+            <TextView
+                android:id="@+id/tvSinglePostName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_toEndOf="@+id/ivSinglePostProfile"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tvSinglePostDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSinglePostName"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_toEndOf="@+id/ivSinglePostProfile"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_9sdp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvSinglePostDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp" />
+
+        <ImageView
+            android:id="@+id/ivSinglePostPost"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rlSinglePostVideo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp">
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/vvSinglePost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                />
+
+            <ProgressBar
+                android:id="@+id/pbSinglePostVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp">
+
+            <CheckBox
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:id="@+id/cbSinglePostLike"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_36sdp"
+                android:button="@drawable/checkbox_like" />
+
+            <ImageView
+                android:id="@+id/ivSinglePostComment"
+                android:src="@drawable/ic_comment"
+                android:layout_toEndOf="@+id/cbSinglePostLike"
+                android:padding="@dimen/_9sdp"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp" />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_4sdp"
+                android:id="@+id/tvSinglePostLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cbSinglePostLike"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:layout_marginTop="@dimen/_4sdp"
+                android:id="@+id/tvSinglePostComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSinglePostLikes"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_11sdp" />
+
+            <ImageView
+                android:id="@+id/ivSinglePostShare"
+                android:src="@drawable/ic_share"
+                android:padding="@dimen/_8sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Share"
+                android:layout_toStartOf="@+id/ivSinglePostShare"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_11sdp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbSinglePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:visibility="gone" />
+
+</LinearLayout>
